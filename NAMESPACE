@@ -2,3 +2,6 @@
 
 S3method(print,champion_tree)
 export(champion_tree)
+export(crown_helper)
+export(crown_helper_cpp)
+export(crown_helper_faster)
