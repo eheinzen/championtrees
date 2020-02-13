@@ -6,3 +6,7 @@
 NULL
 
 
+
+#' @importFrom Rcpp sourceCpp
+#' @useDynLib championtrees
+NULL

@@ -17,3 +17,7 @@ Suggests:
     testthat
 RoxygenNote: 7.0.2
 VignetteBuilder: knitr
+LinkingTo: 
+    Rcpp
+Imports: 
+    Rcpp
