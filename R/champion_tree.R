@@ -14,7 +14,7 @@ champion_tree <- function(circumference, height, spread, common="unknown", scien
 {
   structure(list(circumference = circumference, height = height, spread = spread,
                  common = common, scientific = scientific,
-                 points = circumference + height + spread/4), class = "champion_tree")
+                 points = round(circumference + height + spread/4)), class = "champion_tree")
 }
 
 #' @export
