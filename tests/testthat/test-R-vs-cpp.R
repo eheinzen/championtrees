@@ -7,16 +7,16 @@ if(RUN_TESTS)
     s = sample(paste0("species", 1:100), 1e6, replace = TRUE)
   )
   test <- test[order(test$s, -test$x), ]
-  
+
   test_that("Rcpp implementation is right", {
     expect_equal(crown_helper(test$x, test$s), crown_helper_cpp(test$x, test$s))
     expect_equal(crown_helper_faster(test$x, test$s), crown_helper_cpp(test$x, test$s))
   })
-  
+
   # microbenchmark::microbenchmark(
-  #   crown_champions(test$x, test$s),
-  #   crown_champions2(test$x, test$s),
-  #   crown_champions_cpp(test$x, test$s)
+  #   crown_helper(test$x, test$s),
+  #   crown_helper_faster(test$x, test$s),
+  #   crown_helper_cpp(test$x, test$s)
   # )
 }
 

@@ -5,7 +5,7 @@ using namespace Rcpp;
 IntegerVector crownCpp(NumericVector x, IntegerVector speciesStarts)
 {
   IntegerVector out(x.size());
-  
+
   for(int i = 0; i < speciesStarts.size() - 1; i++)
   {
     double mx = x[speciesStarts[i]];
@@ -14,7 +14,7 @@ IntegerVector crownCpp(NumericVector x, IntegerVector speciesStarts)
     for(int j = speciesStarts[i]; j < speciesStarts[i+1]; j++)
     {
       bool cochamp = false;
-      
+
       if(j == speciesStarts[i])
       {
         out[j] = 2;
